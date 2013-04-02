@@ -1,0 +1,26 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proyecto;
+
+import java.io.StringReader;
+
+/**
+ *
+ * @author Alonso
+ */
+public class Driver {
+    
+    public void parse(String source) {
+        proyecto.Scanner s = new proyecto.Scanner(new StringReader(source));
+        proyecto.parser p = new parser(s);
+        
+        try {
+            p.parse();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+    
+}
